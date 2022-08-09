@@ -1,0 +1,1 @@
+/home/alh/.zshrc
