@@ -1,8 +1,8 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-
+#RUN npm install -g typewritten
 # Path to your oh-my-zsh installation.
-ZSH=/usr/share/oh-my-zsh
+ZSH=/home/prod/.oh-my-zsh
 setxkbmap -option caps:escape
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -11,7 +11,8 @@ setxkbmap -option caps:escape
 setopt appendhistory
 setopt auto_cd
 setopt share_history
-ZSH_THEME="typewritten/typewritten"
+# i copied entire typewritten into oh-my-zsh
+ZSH_THEME="typewritten"
 export TYPEWRITTEN_PROMPT_LAYOUT="singleline"
 export TYPEWRITTEN_SYMBOL="λ"
 # Set list of themes to pick from when loading at random
@@ -74,6 +75,7 @@ DISABLE_AUTO_UPDATE="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
+stty erase ^H
 
 # User configuration
 
@@ -117,8 +119,8 @@ alias tarx='tar -xvzf'
 alias mkdir='mkdir -vp'
 alias rm='rm -rifv'
 alias cp='cp -riv'
-alias ls='exa  --icons'
-alias tree='exa --tree --icons'
+alias ls='eza  --icons'
+alias tree='eza --tree --icons'
 alias v='vim'
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
@@ -126,5 +128,5 @@ if [[ ! -d $ZSH_CACHE_DIR ]]; then
 fi
 
 source $ZSH/oh-my-zsh.sh
-alias ls='exa --icons'
-export EXA_ICON_SPACING=2
+alias ls='eza --icons'
+export EZA_ICON_SPACING=2
